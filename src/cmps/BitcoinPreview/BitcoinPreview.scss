@@ -1,0 +1,14 @@
+.contact-preview {
+      display: flex;
+      justify-content: center;
+      padding: 10px 20px;
+      box-shadow: 0px 0px 2px 1px #8d878780;
+      min-width: 100px;
+      margin-block-end: 10px;
+      cursor: pointer;
+
+      img {
+            width: 50px;
+            margin-inline-end: 50px;
+      }
+}

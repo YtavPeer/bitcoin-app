@@ -1,0 +1,15 @@
+.app-header {
+     display: flex;
+     justify-content: space-between;
+     .navbar-header{
+           display: flex;
+           li{
+                 margin-inline-start: 10px;
+                 list-style: none;
+                 img{
+                       width: 50px;
+                       margin-inline-start: 30px;
+                 }
+           }
+     }
+}
