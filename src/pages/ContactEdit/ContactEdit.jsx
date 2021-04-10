@@ -3,10 +3,12 @@ import { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { contactService } from '../../services/contactService'
 import backLogo from '../../assets/icon/back.png'
+import { connect } from 'react-redux'
+import { saveContact } from '../../store/actions/contactActions'
 
 import './ContactEdit.scss'
 
-export class ContactEdit extends Component {
+class _ContactEdit extends Component {
 
     state = {
         contact: null
@@ -32,7 +34,7 @@ export class ContactEdit extends Component {
     onSaveContact = async (ev) => {
         ev.preventDefault()
         console.log('contact is:', this.state.contact);
-        await contactService.saveContact({ ...this.state.contact })
+        this.props.saveContact({ ...this.state.contact })
         this.props.history.push('/contact')
     }
 
@@ -53,10 +55,18 @@ export class ContactEdit extends Component {
 
                 <div className="btn-container">
                     <button>Save Contact</button>
-                    <Link to='/contact'><img src={backLogo} alt=""/></Link>
+                    <Link to='/contact'><img src={backLogo} alt="" /></Link>
                 </div>
-                
+
             </form>
         )
     }
 }
+
+
+
+const mapDispatchToProps = {
+    saveContact
+}
+
+export const ContactEdit = connect(null, mapDispatchToProps)(_ContactEdit)

@@ -138,8 +138,6 @@ function sort(arr) {
 }
 
 function getContacts(filterBy = null) {
-  console.log('filter is', filterBy)
-
   return new Promise((resolve, reject) => {
     var contactsToReturn = contacts;
     if (filterBy && filterBy.name) {

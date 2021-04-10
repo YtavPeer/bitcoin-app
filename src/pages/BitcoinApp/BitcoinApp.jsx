@@ -7,6 +7,7 @@ import { ContactPage } from '../ContactPage'
 import { StatisticPage } from '../StatisticPage'
 import { ContactDetailsPage } from '../ContactDetailsPage'
 import { ContactEdit } from '../ContactEdit'
+import {SignupPage } from '../SignupPage'
 
 import './BitcoinApp.scss'
 
@@ -23,11 +24,11 @@ export class BitcoinApp extends Component {
                         <Route component={ContactDetailsPage} path='/contact/:id' />
                         <Route component={ContactPage} path='/contact' />
                         <Route component={StatisticPage} path='/statistic' />
-                        <Route component={HomePage} path='/' />
+                        <Route component={HomePage} path='/home' />
+                        <Route component={SignupPage} path='/'/>
                     </Switch>
                 </div>
             </Router>
-
         )
     }
 }

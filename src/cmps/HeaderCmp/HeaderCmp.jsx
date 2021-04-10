@@ -11,7 +11,7 @@ export const HeaderCmp = ({ onSelectPage }) => {
             <h1>Bitcoin app</h1>
             <ul className="navbar-header">
                 <img src="../../../assets/icon/home.png" alt="" />
-                <li><NavLink exact to="/" activeClassName="active-nav"><img src={logoHome} alt="" /></NavLink></li>
+                <li><NavLink exact to="/home" activeClassName="active-nav"><img src={logoHome} alt="" /></NavLink></li>
                 <li><NavLink to="/contact" activeClassName="active-nav"><img src={logoContact} alt="" /></NavLink></li>
                 <li><NavLink to="/Statistic" activeClassName="active-nav"><img src={logoStatistic} alt="" /></NavLink></li>
             </ul>

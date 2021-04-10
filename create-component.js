@@ -133,3 +133,6 @@ try {
 } catch (e) {
     console.log('ERROR:', e.message ? e.message : e)
 }
+
+
+//node create-component.js --name ExampleComp --cmpType func --dir ./cmps
