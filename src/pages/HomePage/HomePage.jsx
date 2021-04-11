@@ -37,7 +37,7 @@ export class HomePage extends Component {
         return (
             <>
                 <div className="home-page">
-                    <h1>Hello {loggedUser.name.userName}</h1>
+                    <h1>Hello {loggedUser.name}</h1>
                     <h3>Coins {loggedUser.coins}</h3>
                     <h3>Btc {bitcoinRate}</h3>
                 </div>

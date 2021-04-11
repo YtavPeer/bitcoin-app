@@ -27,13 +27,14 @@ function signUp(name) {
 
 function addMove(contact, amount) {
       const move = {
+            id: makeId(),
             toId: contact._id,
             to: contact.name,
             at: Date.now(),
             amount: amount.amount
       }
       loggedUser.moves.push(move)
-      loggedUser.coins=loggedUser.coins-amount.amount
+      loggedUser.coins = loggedUser.coins - amount.amount
       storageService.store(KEY, loggedUser)
       return loggedUser
 }
